@@ -129,3 +129,30 @@ git push
 - [ ] push 성공 확인
 - [ ] 필요시 n8n import/테스트
 
+
+---
+
+## 9) 변경 리포트 명령 (추가)
+
+워크플로우 수정 내용 확인용:
+
+```bash
+cd /opt/n8n-ops
+make report
+```
+
+- 커밋 전 변경이 있으면: working tree/index 기준으로 리포트
+- 커밋 전 변경이 없으면: `HEAD~1..HEAD` 기준으로 마지막 변경 리포트
+
+마지막 커밋만 강제로 보고 싶으면:
+
+```bash
+make report-last
+```
+
+특정 비교 구간(수동):
+
+```bash
+./scripts/report_changes.sh <base_ref> <target_ref>
+# 예) ./scripts/report_changes.sh a31d7ea cecb7ae
+```

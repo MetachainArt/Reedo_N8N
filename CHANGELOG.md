@@ -12,3 +12,8 @@ n8n 워크플로우 변경 이력을 기록합니다.
 - change: 초기 export 및 저장소 버전관리 시작
 - impact: 낮음
 - rollback: 초기 커밋 대비 파일 단위 복원
+
+- workflow: 공통 운영
+- change: workflow 변경 리포트 스크립트(scripts/report_changes.sh) 및 Makefile(report/report-last) 추가
+- impact: 낮음
+- rollback: 해당 파일 삭제 후 이전 커밋으로 복원
